@@ -11,7 +11,7 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Textarea } from "./ui/textarea";
-import { Product } from "./ProductCard";
+import type { Product } from "./ProductCard";
 import { Upload } from "lucide-react";
 
 interface ProductDialogProps {

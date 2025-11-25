@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { Button } from "../components/ui/button";
-import ProductCard, { Product } from "../components/ProductCard";
+import ProductCard from "../components/ProductCard";
+import type { Product } from "../components/ProductCard";
 import ProductDialog from "../components/ProductDialog";
 import DeleteDialog from "../components/DeleteDialog";
 import { Plus, LogOut, UtensilsCrossed } from "lucide-react";
