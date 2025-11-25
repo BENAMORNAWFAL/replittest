@@ -1,15 +1,16 @@
 import { useState } from "react";
-import { useAuth } from "@/contexts/AuthContext";
-import { Button } from "@/components/ui/button";
-import ProductCard, { Product } from "@/components/ProductCard";
-import ProductDialog from "@/components/ProductDialog";
-import DeleteDialog from "@/components/DeleteDialog";
+import { useAuth } from "../contexts/AuthContext";
+import { Button } from "../components/ui/button";
+import ProductCard from "../components/ProductCard";
+import type { Product } from "../components/ProductCard";
+import ProductDialog from "../components/ProductDialog";
+import DeleteDialog from "../components/DeleteDialog";
 import { Plus, LogOut, UtensilsCrossed } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
-import burgerImage from "@assets/generated_images/gourmet_burger_product_photo.png";
-import pastaImage from "@assets/generated_images/pasta_carbonara_product_photo.png";
-import saladImage from "@assets/generated_images/greek_salad_product_photo.png";
-import salmonImage from "@assets/generated_images/grilled_salmon_product_photo.png";
+import { useToast } from "../hooks/use-toast";
+import burgerImage from "../../client/src/assets/generated_images/gourmet_burger_product_photo.png";
+import pastaImage from "../../client/src/assets/generated_images/pasta_carbonara_product_photo.png";
+import saladImage from "../../client/src/assets/generated_images/greek_salad_product_photo.png";
+import salmonImage from "../../client/src/assets/generated_images/grilled_salmon_product_photo.png";
 
 // TODO: Remove mock data - replace with actual API calls
 const initialProducts: Product[] = [

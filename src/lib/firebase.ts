@@ -5,7 +5,7 @@ import {
   createUserWithEmailAndPassword,
   signOut as firebaseSignOut,
   onAuthStateChanged,
-  User,
+  type User,
 } from "firebase/auth";
 import { getDatabase, ref, set, get } from "firebase/database";
 

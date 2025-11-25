@@ -1,6 +1,6 @@
 import { useState } from "react";
 import DeleteDialog from "../DeleteDialog";
-import { Button } from "@/components/ui/button";
+import { Button } from "../ui/button";
 
 export default function DeleteDialogExample() {
   const [open, setOpen] = useState(false);

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ProductDialog from "../ProductDialog";
-import { Button } from "@/components/ui/button";
-import burgerImage from "@assets/generated_images/gourmet_burger_product_photo.png";
+import { Button } from "../ui/button";
+import burgerImage from "../../../client/src/assets/generated_images/gourmet_burger_product_photo.png";
 
 export default function ProductDialogExample() {
   const [open, setOpen] = useState(false);

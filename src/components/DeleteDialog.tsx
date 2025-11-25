@@ -7,8 +7,8 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
-import { Product } from "./ProductCard";
+} from "./ui/alert-dialog";
+import type { Product } from "./ProductCard";
 
 interface DeleteDialogProps {
   open: boolean;

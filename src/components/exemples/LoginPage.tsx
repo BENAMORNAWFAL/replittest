@@ -1,5 +1,5 @@
-import { AuthProvider } from "@/contexts/AuthContext";
-import LoginPage from "@/pages/login";
+import { AuthProvider } from "../../contexts/AuthContext";
+import LoginPage from "../../pages/login";
 
 export default function LoginPageExample() {
   return (

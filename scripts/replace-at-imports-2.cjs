@@ -24,15 +24,35 @@ function processFile(filePath) {
   let changed = false;
 
   // helper
-  const replaceMatch = (m, quote, prefix, rest) => {
-    let target;
-    if (prefix === "@") target = path.resolve(root, "client", "src", rest);
-    else if (prefix === "@assets")
-      target = path.resolve(root, "attached_assets", rest);
-    else if (prefix === "@shared") target = path.resolve(root, "shared", rest);
-    else return m;
+  const replaceMatch = (m, quote, prefix, rest, sourceFile) => {
+    // Compute candidate targets (order matters)
+    const candidates = [];
+    if (prefix === "@") {
+      // prefer same-root resolution: if source is in client, prefer client/src
+      if (filePath.includes(path.join("client", "src"))) {
+        candidates.push(path.resolve(root, "client", "src", rest));
+        candidates.push(path.resolve(root, "src", rest));
+      } else {
+        // source in top-level src or other locations -> prefer top-level src first
+        candidates.push(path.resolve(root, "src", rest));
+        candidates.push(path.resolve(root, "client", "src", rest));
+      }
+    } else if (prefix === "@assets") {
+      // try common asset locations
+      candidates.push(path.resolve(root, "src", "assets", rest));
+      candidates.push(path.resolve(root, "client", "src", "assets", rest));
+      candidates.push(path.resolve(root, "attached_assets", rest));
+    } else if (prefix === "@shared") {
+      candidates.push(path.resolve(root, "shared", rest));
+    } else {
+      return m;
+    }
 
-    // if target doesn't have extension and exists as file with various extensions, keep rest as-is
+    // Pick the first existing candidate; if none exist, use the first candidate (best-effort)
+    let target = candidates.find((p) => fs.existsSync(p));
+    if (!target) target = candidates[0];
+
+    // compute relative path and convert to posix-style separators
     const rel = path.relative(dir, target).split(path.sep).join("/");
     const out = quote + (rel.startsWith(".") ? rel : "./" + rel) + quote;
     changed = true;

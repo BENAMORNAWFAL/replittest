@@ -1,5 +1,5 @@
 import ProductCard from "../ProductCard";
-import burgerImage from "@assets/generated_images/gourmet_burger_product_photo.png";
+import burgerImage from "../../../client/src/assets/generated_images/gourmet_burger_product_photo.png";
 
 export default function ProductCardExample() {
   return (
