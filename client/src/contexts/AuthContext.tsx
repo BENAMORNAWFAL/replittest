@@ -6,6 +6,7 @@ import {
   signUp as firebaseSignUp,
   signOut as firebaseSignOut,
 } from "../lib/firebase";
+import "tailwindcss";
 
 interface AuthContextType {
   user: User | null;

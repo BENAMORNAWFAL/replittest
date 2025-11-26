@@ -13,6 +13,7 @@ import { Label } from "./ui/label";
 import { Textarea } from "./ui/textarea";
 import type { Product } from "./ProductCard";
 import { Upload } from "lucide-react";
+import "tailwindcss";
 
 interface ProductDialogProps {
   open: boolean;

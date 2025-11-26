@@ -1,5 +1,6 @@
 import ProductCard from "../ProductCard";
 import burgerImage from "../../assets/generated_images/gourmet_burger_product_photo.png";
+import "tailwindcss";
 
 export default function ProductCardExample() {
   return (

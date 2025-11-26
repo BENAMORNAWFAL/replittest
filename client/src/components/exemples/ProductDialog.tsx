@@ -2,6 +2,7 @@ import { useState } from "react";
 import ProductDialog from "../ProductDialog";
 import { Button } from "../ui/button";
 import burgerImage from "../../assets/generated_images/gourmet_burger_product_photo.png";
+import "tailwindcss";
 
 export default function ProductDialogExample() {
   const [open, setOpen] = useState(false);

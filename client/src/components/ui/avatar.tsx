@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import * as AvatarPrimitive from "@radix-ui/react-avatar";
+import "tailwindcss";
 
 import { cn } from "../../lib/utils";
 

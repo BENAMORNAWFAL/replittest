@@ -11,6 +11,7 @@ import burgerImage from "../assets/generated_images/gourmet_burger_product_photo
 import pastaImage from "../assets/generated_images/pasta_carbonara_product_photo.png";
 import saladImage from "../assets/generated_images/greek_salad_product_photo.png";
 import salmonImage from "../assets/generated_images/grilled_salmon_product_photo.png";
+import "tailwindcss";
 
 // TODO: Remove mock data - replace with actual API calls
 const initialProducts: Product[] = [

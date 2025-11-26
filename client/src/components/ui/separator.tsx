@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as SeparatorPrimitive from "@radix-ui/react-separator";
+import "tailwindcss";
 
 import { cn } from "../../lib/utils";
 

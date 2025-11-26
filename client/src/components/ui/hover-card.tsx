@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
+import "tailwindcss";
 
 import { cn } from "../../lib/utils";
 

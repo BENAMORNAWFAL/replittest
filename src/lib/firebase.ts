@@ -9,9 +9,20 @@ import {
 } from "firebase/auth";
 import { getDatabase, ref, set, get } from "firebase/database";
 
+declare global {
+  interface ImportMetaEnv {
+    readonly VITE_FIREBASE_API_KEY: string;
+    [key: string]: string | undefined;
+  }
+
+  interface ImportMeta {
+    readonly env: ImportMetaEnv;
+  }
+}
+
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: "react-native-food-delive-9ab20.firebaseapp.com",
+  authDomain: "localhost",
   databaseURL:
     "https://react-native-food-delive-9ab20-default-rtdb.firebaseio.com",
   projectId: "react-native-food-delive-9ab20",

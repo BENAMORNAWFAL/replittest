@@ -7,6 +7,7 @@ async function throwIfResNotOk(res: Response) {
     throw new Error(`${res.status}: ${text}`);
   }
 }
+import "tailwindcss";
 
 export async function apiRequest(
   method: string,

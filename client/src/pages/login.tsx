@@ -13,6 +13,7 @@ import {
 } from "../components/ui/card";
 import { useToast } from "../hooks/use-toast";
 import { UtensilsCrossed } from "lucide-react";
+import "tailwindcss";
 
 export default function LoginPage() {
   const [, setLocation] = useLocation();

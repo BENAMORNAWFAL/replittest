@@ -1,4 +1,5 @@
 "use client";
+import "tailwindcss";
 
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
 

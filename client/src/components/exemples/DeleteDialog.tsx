@@ -1,6 +1,7 @@
 import { useState } from "react";
 import DeleteDialog from "../DeleteDialog";
 import { Button } from "../ui/button";
+import "tailwindcss";
 
 export default function DeleteDialogExample() {
   const [open, setOpen] = useState(false);

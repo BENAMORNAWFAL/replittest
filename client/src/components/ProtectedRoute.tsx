@@ -1,5 +1,6 @@
 import { useAuth } from "../contexts/AuthContext";
 import { Redirect } from "wouter";
+import "tailwindcss";
 
 export default function ProtectedRoute({
   children,

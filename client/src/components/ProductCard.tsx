@@ -1,6 +1,7 @@
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
 import { Edit, Trash2 } from "lucide-react";
+import "tailwindcss";
 
 export interface Product {
   id: string;

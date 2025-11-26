@@ -1,4 +1,5 @@
 import * as React from "react";
+import "tailwindcss";
 
 import type { ToastActionElement, ToastProps } from "../components/ui/toast";
 

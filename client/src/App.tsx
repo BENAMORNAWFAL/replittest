@@ -8,6 +8,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import LoginPage from "./pages/login";
 import Dashboard from "./pages/dashboard";
 import NotFound from "./pages/not-found";
+import "tailwindcss";
 
 function Router() {
   return (

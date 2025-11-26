@@ -1,4 +1,5 @@
 import { cn } from "../../lib/utils";
+import "tailwindcss";
 
 function Skeleton({
   className,

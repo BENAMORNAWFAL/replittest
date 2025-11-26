@@ -11,6 +11,7 @@ import {
   type FieldPath,
   type FieldValues,
 } from "react-hook-form";
+import "tailwindcss";
 
 import { cn } from "../../lib/utils";
 import { Label } from "./label";
